@@ -2,23 +2,23 @@ name: build
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "Alan2188-patch-1" ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ "Alan2188-patch-1" ]
     
 jobs:
   build:
     strategy:
       matrix:
-        platform: [Net6]
+        platform: [Net8]
         include:          
-          - platform: Net6
-            package-name: Net6
-            build-dir: net6.0-windows
+          - platform: Net8
+            package-name: Net8
+            build-dir: net8.0-windows
             proj-name: Smart-de4dot
             solution-name: Smart-de4dot.sln
             config: Release
-            dotnet: 6.0.x
+            dotnet: 8.0.x
             LangVersion: default
 
     runs-on: windows-latest
