@@ -3,7 +3,7 @@
 	<PropertyGroup>
 		<OutputType>WinExe</OutputType>
 		<TargetFramework>net8.0-windows</TargetFramework>
-		<LangVersion>default</LangVersion>
+		<LangVersion>latest</LangVersion>
 		<RootNamespace>Smart_de4dot</RootNamespace>
 		<Nullable>enable</Nullable>
 		<UseWindowsForms>true</UseWindowsForms>
@@ -12,6 +12,8 @@
 		<ApplicationIcon>128.ico</ApplicationIcon>
 		<FileVersion>1.1.1.0</FileVersion>
 		<AssemblyVersion>1.1.1.0</AssemblyVersion>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<DnlibVersion>4.5.0</DnlibVersion>
 	</PropertyGroup>
 
 	<ItemGroup>
