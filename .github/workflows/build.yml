@@ -19,6 +19,7 @@ jobs:
             solution-name: Smart-de4dot.sln
             config: Release
             dotnet: 8.0.x
+            LangVersion: default
 
     runs-on: windows-latest
 
