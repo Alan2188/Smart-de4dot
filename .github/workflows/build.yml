@@ -52,8 +52,9 @@ jobs:
     - name:  Copy release files for upload
       run: Copy-Item -Path ${{matrix.proj-name}}\bin\Release\${{matrix.build-dir}}\* -Destination C:\builtfiles\${{matrix.proj-name}}-${{matrix.package-name}} -Recurse
 
-    - uses: actions/upload-artifact        
+    - name: capture build artifacts
+      uses: actions/upload-artifact@v4
       with:
-        name: ${{matrix.proj-name}} - ${{matrix.build-dir}}
-        path: C:\builtfiles\${{matrix.proj-name}}-${{matrix.package-name}}
-        if-no-files-found: error
+          name: Artifacts
+          path: C:\builtfiles\${{matrix.proj-name}}-${{matrix.package-name}}
+          if-no-files-found: error
